@@ -1,10 +1,11 @@
 <template>
-$END$
+    <div class="content">{{ task.taskName }}, {{ task.taskCategory }}, {{ task.taskSelect }}</div>
 </template>
 
 <script>
 export default {
-name: "TaskPage"
+    props: ['task'],
+    name: "TaskPage"
 }
 </script>
 

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/greeting', function () {
+    return 'Hello World';
+});
+Route::get(
+    '/my-page',
+    [MyController::class, 'myfunction']
+);
+
+Route::get(
+    '/new-page',
+    [MyController::class, 'newmyfunction']
+);
